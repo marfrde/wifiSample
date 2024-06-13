@@ -14,6 +14,8 @@ WifiScan::WifiScan()
 void WifiScan::Entry(std::shared_ptr<nxg::DBus::WpaSupplicant::IWpaSupplicantDBusClient> wpaSupplicant)
 {
 	std::cout << "Entry" << std::endl;
+	std::cerr << "Entry" << std::endl;
+
 
 	if(m_wpaSupplicant == nullptr)
 	{
@@ -22,8 +24,7 @@ void WifiScan::Entry(std::shared_ptr<nxg::DBus::WpaSupplicant::IWpaSupplicantDBu
 
 		m_interface->AddScanDoneCallback([this](bool var) {
 			std::cout << "callback: network scan done" << std::endl;
-			this->m_scanInProgress = false;
-			this->m_scanCompleted = true;
+			std::cerr << "callback: network scan done" << std::endl;
 			auto result = this->m_interface->GetScanResult();
 
 			this->m_foundSsids = std::vector<std::string>();
@@ -32,9 +33,13 @@ void WifiScan::Entry(std::shared_ptr<nxg::DBus::WpaSupplicant::IWpaSupplicantDBu
 			{
 				auto ssid = result[i]->GetSSID();
 				std::cout << "found " << ssid << std::endl;
+				std::cerr << "found " << ssid << std::endl;
 				this->m_foundSsids.push_back(ssid);
 			}
 			time(&this->m_lastScanCompleted);
+			this->m_scanInProgress = false;
+			this->m_scanCompleted = true;
+
 		});
 	}
 }
@@ -54,6 +59,7 @@ void WifiScan::Work()
 		{
 
 			std::cout << "network scan started" << std::endl;
+			std::cerr << "network scan started" << std::endl;
 			m_scanInProgress = true;
 			m_interface->StartScan();
 		}
@@ -61,7 +67,9 @@ void WifiScan::Work()
 	if (m_scanCompleted)
 	{
 		std::cout << "process Scan result" << std::endl;
+		std::cerr << "process Scan result" << std::endl;
 		std::cout << "got " << this->m_foundSsids.size() << " results" << std::endl;
+		std::cerr << "got " << this->m_foundSsids.size() << " results" << std::endl;
 
 		// real project will use the ssid strings at this location.
 

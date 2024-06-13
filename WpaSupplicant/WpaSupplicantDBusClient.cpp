@@ -172,6 +172,13 @@ namespace nxg::DBus
 		std::string BSS::GetSSID()
 		{
 			auto ssid = m_object->GetSSID();
+			/*std::cout << "got ssid vector of size: " << ssid.size() << " ssid characters: ";
+
+			std::for_each(ssid.begin(), ssid.end(),[](unsigned char& character)  {
+				std::cout << character;
+			});
+
+			std::cout << std::endl;*/
 			return std::string{ssid.begin(), ssid.end()};
 		}
 
@@ -218,6 +225,7 @@ namespace nxg::DBus
 			catch (std::exception const& e)
 			{
 				std::cout << "BSS receiving failed with exception " << e.what() << std::endl;
+				std::cerr << "BSS receiving failed with exception " << e.what() << std::endl;
 			}
 			return result;
 		}
