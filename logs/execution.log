@@ -1,0 +1,150 @@
+root@kbg7z:/root ./wifiSample 2> trace.log
+get dispatcher
+get wpaSupplicant
+Entry
+Got path '/fi/w1/wpa_supplicant1/Interfaces/0' for interface 'wlan0'
+start loop
+network scan started
+callback: network scan done
+found blue-zone-Mob
+found blue-zone-Visi
+found blue-zone-Inter
+found
+found blue-z
+found VOIP-ST
+found CLIENT-ST
+found
+found PDA-ST
+found OTHER-ST
+found Data-Mem
+found blue-zone-Mob
+found blue-zone-Serv
+found blue-zone-Visi
+found blue-zone-Inter
+found
+found blue-zone-Mob
+found blue-zone-Serv
+found blue-zone-Visi
+found blue-zone-Inter
+found cde-g
+found Matter-A
+found cde-g
+found Data-Mem
+found
+found
+found PDA-ST
+found OTHER-ST
+found Data-Mem
+found VOIP-ST
+found PDA-ST
+found OTHER-ST
+found VOIP-ST
+found CLIENT-ST
+found CLIENT-ST
+found OTHER-ST
+found
+found CLIENT-ST
+found VOIP-ST
+found PDA-ST
+found Data-Mem
+found GUEST-ST
+found GUEST-ST
+found GUEST-ST
+found GUEST-ST
+process Scan result
+got 45 results
+network scan started
+callback: network scan done
+found blue-zone-Mob
+found blue-zone-Visi
+found blue-zone-Inter
+found
+found blue-z
+found VOIP-ST
+found CLIENT-ST
+found
+found PDA-ST
+found OTHER-ST
+found Data-Mem
+found blue-zone-Mob
+found blue-zone-Serv
+found blue-zone-Visi
+found blue-zone-Inter
+found
+found blue-zone-Mob
+found blue-zone-Serv
+found blue-zone-Visi
+found blue-zone-Inter
+found cde-g
+found Matter-A
+found cde-g
+found Data-Mem
+found
+found
+found PDA-ST
+found OTHER-ST
+found Data-Mem
+found VOIP-ST
+found PDA-ST
+found OTHER-ST
+found VOIP-ST
+found CLIENT-ST
+found CLIENT-ST
+found OTHER-ST
+found
+found CLIENT-ST
+found VOIP-ST
+found PDA-ST
+found Data-Mem
+found GUEST-ST
+found GUEST-ST
+found GUEST-ST
+found GUEST-ST
+process Scan result
+got 45 results
+network scan started
+callback: network scan done
+BSS receiving failed with exception Connection ":1.12" is not allowed to add more match rules (increase limits in configuration file if required; max_match_rules_per_connection=512)
+found blue-zone-Mob
+found blue-zone-Visi
+found blue-zone-Inter
+found
+found blue-z
+found VOIP-ST
+found CLIENT-ST
+found
+found PDA-ST
+found OTHER-ST
+found Data-Mem
+found blue-zone-Mob
+found blue-zone-Serv
+found blue-zone-Visi
+found blue-zone-Inter
+found
+found blue-zone-Mob
+found blue-zone-Serv
+found blue-zone-Visi
+found blue-zone-Inter
+found cde-g
+found Matter-A
+found cde-g
+found Data-Mem
+found
+found
+found PDA-ST
+found OTHER-ST
+found Data-Mem
+found VOIP-ST
+found PDA-ST
+found OTHER-ST
+found VOIP-ST
+found CLIENT-ST
+found CLIENT-ST
+process Scan result
+got 35 results
+network scan started
+callback: network scan done
+BSS receiving failed with exception Connection ":1.12" is not allowed to add more match rules (increase limits in configuration file if required; max_match_rules_per_connection=512)
+process Scan result
+got 0 results
+^C
